@@ -239,8 +239,8 @@ class ViewController: UIViewController {
         })
         // 連打の防止
         sender.isEnabled = false
-        // 0.5病後に次のカードを表示
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+        // 0.2秒後に次のカードを表示
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
             // 次の画面を表示
             self.nextPersonList()
             sender.isEnabled = true
@@ -257,8 +257,8 @@ class ViewController: UIViewController {
         likedName.append(userList[nowUserNum].name)
         // 連打の防止
         sender.isEnabled = false
-        // 0.5秒後に次のカードを表示
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+        // 0.2秒後に次のカードを表示
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
              self.nextPersonList()
             sender.isEnabled = true
         })
